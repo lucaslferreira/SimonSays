@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.Random;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAmarelo = findViewById(R.id.buttonAmarelo);
         buttonIniciar = findViewById(R.id.buttonIniciar);
         textViewPontuacao = findViewById(R.id.textViewPontuacao);
+        TextView textViewTitulo = findViewById(R.id.textViewTitulo);
     }
 
     private void inicializarSons() {
@@ -144,9 +147,38 @@ public class MainActivity extends AppCompatActivity {
 
         tocarSom(cor);
 
-        botao.setAlpha(0.5f);
+        // "Acende" o botão (cores vibrantes)
+        switch (cor) {
+            case VERMELHO:
+                botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FF0000")));
+                break;
+            case VERDE:
+                botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#00FF00")));
+                break;
+            case AZUL:
+                botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#0000FF")));
+                break;
+            case AMARELO:
+                botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FFFF00")));
+                break;
+        }
+
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            botao.setAlpha(1.0f);
+            // "Apaga" o botão (cores escuras)
+            switch (cor) {
+                case VERMELHO:
+                    botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#800000")));
+                    break;
+                case VERDE:
+                    botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#008000")));
+                    break;
+                case AZUL:
+                    botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000080")));
+                    break;
+                case AMARELO:
+                    botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#808000")));
+                    break;
+            }
         }, duracao);
     }
 
