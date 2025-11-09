@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.Simonsays"
+    namespace = "com.example.simonSays"
     compileSdk = 36
 
     defaultConfig {
