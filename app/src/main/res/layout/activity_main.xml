@@ -19,7 +19,6 @@
         android:textSize="36sp"
         android:textStyle="bold" />
 
-    <!-- TextView para pontuação -->
     <TextView
         android:id="@+id/textViewPontuacao"
         android:layout_width="wrap_content"
@@ -30,7 +29,7 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <!-- GridLayout para os botões coloridos -->
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -39,7 +38,7 @@
         android:columnCount="2"
         android:padding="10dp">
 
-        <!-- Botão Vermelho (versão apagada) -->
+
         <Button
             android:id="@+id/buttonVermelho"
             android:layout_width="0dp"
@@ -53,7 +52,6 @@
             android:text=""
             android:elevation="8dp" />
 
-        <!-- Botão Verde (versão apagada) -->
         <Button
             android:id="@+id/buttonVerde"
             android:layout_width="0dp"
@@ -67,7 +65,6 @@
             android:text=""
             android:elevation="8dp" />
 
-        <!-- Botão Azul (versão apagada) -->
         <Button
             android:id="@+id/buttonAzul"
             android:layout_width="0dp"
@@ -81,7 +78,6 @@
             android:text=""
             android:elevation="8dp" />
 
-        <!-- Botão Amarelo (versão apagada) -->
         <Button
             android:id="@+id/buttonAmarelo"
             android:layout_width="0dp"

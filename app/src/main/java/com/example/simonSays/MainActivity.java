@@ -147,7 +147,6 @@ public class MainActivity extends AppCompatActivity {
 
         tocarSom(cor);
 
-        // "Acende" o botão (cores vibrantes)
         switch (cor) {
             case VERMELHO:
                 botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FF0000")));
@@ -164,7 +163,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            // "Apaga" o botão (cores escuras)
             switch (cor) {
                 case VERMELHO:
                     botao.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#800000")));
